@@ -23,13 +23,13 @@ func (s *Stack[T]) Pop() (T, error) {
 		var t T
 		return t, errors.New("stack is empty")
 	}
-	element := s.elements[0]
-	s.elements = s.elements[1:]
+	element := s.elements[s.Size()-1]
+	s.elements = s.elements[:s.Size()-1]
 	return element, nil
 }
 
 func (s *Stack[T]) Push(element T) {
-	s.elements = append([]T{element}, s.elements...)
+	s.elements = append(s.elements, element)
 }
 
 func (s *Stack[T]) Peek() (T, error) {
@@ -37,6 +37,6 @@ func (s *Stack[T]) Peek() (T, error) {
 		var t T
 		return t, errors.New("empty stack")
 	}
-	element := s.elements[0]
+	element := s.elements[s.Size()-1]
 	return element, nil
 }
