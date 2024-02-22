@@ -3,7 +3,7 @@ package queue_test
 import (
 	"testing"
 
-	"github.com/prateekjoshi2013/go-ds/queue"
+	"github.com/prateekjoshi2013/gods/queue"
 )
 
 func TestQueue(t *testing.T) {
