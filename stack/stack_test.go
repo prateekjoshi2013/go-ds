@@ -3,7 +3,7 @@ package stack_test
 import (
 	"testing"
 
-	"github.com/prateekjoshi2013/go-ds/stack"
+	"github.com/prateekjoshi2013/gods/stack"
 )
 
 func TestStack(t *testing.T){
